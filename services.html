@@ -257,22 +257,26 @@
 
         /* TOGGLES & BUTTONS */
         .theme-toggle-pill {
-            width: 52px;
-            height: 28px;
+            width: 68px;
+            height: 40px;
             background: var(--bg-secondary);
-            border-radius: 30px;
+            border-radius: 9999px;
             position: relative;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 6px;
+            padding: 0 10px;
             border: 1px solid var(--border-color);
+            box-sizing: border-box;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
         }
 
         .theme-toggle-pill i {
-            font-size: 10px;
+            font-size: 12px;
             z-index: 1;
+            transition: color 0.3s ease;
         }
 
         .theme-toggle-pill .fa-sun {
@@ -285,44 +289,60 @@
 
         .theme-toggle-pill .thumb {
             position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 22px;
-            height: 22px;
+            top: 3px;
+            left: 3px;
+            width: 32px;
+            height: 32px;
             background: white;
             border-radius: 50%;
             transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
             z-index: 2;
             border: 1px solid var(--border-color);
+            box-sizing: border-box;
         }
 
         body.dark-mode .theme-toggle-pill .thumb {
-            transform: translateX(24px);
+            transform: translateX(28px);
             background: #334155;
             border-color: var(--border-color);
         }
 
         .rtl-btn-style {
-            width: 44px;
-            height: 28px;
+            min-width: 54px;
+            height: 40px;
+            padding: 0 16px;
             background: var(--bg-secondary);
-            border-radius: 4px;
+            border-radius: 9999px;
             border: 1px solid var(--border-color);
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 10px;
-            font-weight: 400;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
             cursor: pointer;
             color: var(--text-main);
             transition: all 0.3s ease;
+            box-sizing: border-box;
+            flex-shrink: 0;
         }
 
         .rtl-btn-style:hover {
             background: var(--accent-color);
             color: #fff;
             border-color: var(--accent-color);
+        }
+
+        .navbar .btn,
+        .fullscreen-menu .btn {
+            height: 40px;
+            border-radius: 9999px;
+            padding: 0 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
         }
 
         .btn {
